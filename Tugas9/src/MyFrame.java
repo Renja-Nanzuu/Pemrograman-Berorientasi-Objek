@@ -26,7 +26,6 @@ public class MyFrame extends JFrame implements ActionListener {
 	MyFrame() {
 		this.setTitle("Aplikasi Kalkulator");
 		this.setLayout(null);
-		//this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		this.setResizable(false);
 		
@@ -38,9 +37,6 @@ public class MyFrame extends JFrame implements ActionListener {
 		TempatAngka.setBorder(border);
 		
 		//Button PanelBottomLeft
-//		GridLayout layoutBBL = new GridLayout(4,3, 10, 10);
-//		layoutBBL.setHgap(10); <- Buat gantiin gap yg ada didalam situ tuh bisa GridLayout(...)
-//		layoutBBL.setVgap(10);
 		panelBottomLeft.setLayout(new GridLayout(4,3, 10, 10)); // Gap atau Margin antar buttonnn
 		panelBottomLeft.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10)); // padding luar
 		panelBottomLeft.add(new JButton("8"));
@@ -101,7 +97,6 @@ public class MyFrame extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
 		JButton btn = (JButton) e.getSource(); // ambil tombol yang diklik
 	    String text = btn.getText(); // ambil isi tombol
 	    
@@ -126,7 +121,7 @@ public class MyFrame extends JFrame implements ActionListener {
 	    		num1 = Double.parseDouble(TempatAngka.getText());
 	        }
 	        operator = text;
-	        TempatAngka.setText(""); // siap input angka kedua
+	        TempatAngka.setText("");
 	    }
 	    
 	    // OPERATOR (%)
